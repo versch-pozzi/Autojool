@@ -1,0 +1,11 @@
+# JoomScan Automation Bot Requirements
+# No additional Python packages needed beyond standard library
+# This file is kept for future compatibility
+
+# Standard library imports used:
+# - subprocess
+# - sys
+# - os
+# - re
+# - time
+# - datetime
