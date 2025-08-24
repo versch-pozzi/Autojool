@@ -7,6 +7,9 @@
 ![Security Scanner](https://img.shields.io/badge/Security-Scanner-green)
 ![Automation Enabled](https://img.shields.io/badge/Automation-Enabled-success)
 ![License MIT](https://img.shields.io/badge/License-MIT-yellow)
+
+
+
 A powerful Python automation tool by versch-pozzi that enhances OWASP JoomScan for automated security assessments of Joomla websites.
 
 ✨ Features
