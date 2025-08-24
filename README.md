@@ -2,10 +2,9 @@
 
 🛡️ Autojool - Joomla Security Automation Bot
 
-https://img.shields.io/badge/Python-3.6+-blue.svg
- https://img.shields.io/badge/Kali-Linux-red.svg https://img.shields.io/badge/Security-Scanner-green.svg https://img.shields.io/badge/Automation-Enabled-success.svg
+https://img.shields.io/badge/Python-3.6%2B-blue https://img.shields.io/badge/Kali-Linux-red https://img.shields.io/badge/Security-Scanner-green https://img.shields.io/badge/Automation-Enabled-success https://img.shields.io/badge/License-MIT-yellow
 
-A powerful Python automation tool by versch-pozzi that enhances OWASP JoomScan for automated security assessments of Joomla websites. Processes multiple targets, filters results, and provides clean vulnerability reports.
+A powerful Python automation tool by versch-pozzi that enhances OWASP JoomScan for automated security assessments of Joomla websites.
 
 ✨ Features
 
@@ -14,9 +13,6 @@ A powerful Python automation tool by versch-pozzi that enhances OWASP JoomScan f
 · ⚡ Critical Priority - Highlights SQL Injection as critical
 · 📊 Clean Reporting - Beautiful table-formatted output
 · ⏱️ Time-Efficient - Automated sequential scanning
-· 🚫 Noise Reduction - Removes unnecessary information
-· 🐍 Easy Setup - One-command installation
-· 🚀 Quick Start - Simple launch system
 
 📦 Quick Installation
 
@@ -84,15 +80,6 @@ Severity Type Emoji
 ⚪ NORMAL Other vulnerabilities ⚪
 🚫 HIDDEN XSS/Cross-Site 🚫
 
-⚙️ Configuration
-
-The bot automatically filters out:
-
-· ❌ XSS vulnerabilities
-· ❌ Cross-Site exploits
-· ❌ Admin panel information
-· ❌ Path enumeration results
-
 🔧 Troubleshooting
 
 Permission Issues:
@@ -107,12 +94,6 @@ JoomScan Not Found:
 sudo apt install joomscan
 ```
 
-Python Issues:
-
-```bash
-sudo apt install python3 python3-pip
-```
-
 🛡️ Legal Disclaimer
 
 For educational and authorized testing only! ⚠️
@@ -121,19 +102,9 @@ For educational and authorized testing only! ⚠️
 · Unauthorized scanning is illegal
 · Developer not responsible for misuse
 
-🤝 Contributing
-
-Feel free to contribute! Fork → Branch → PR → Issue
-
 📄 License
 
 MIT License - see LICENSE file for details.
-
-🙏 Acknowledgments
-
-· OWASP for JoomScan
-· Kali Linux team
-· Python community
 
 ---
 
@@ -157,3 +128,7 @@ cat scan_results.txt
 Happy ethical hacking! 🚀
 
 By versch-pozzi 🎯
+
+---
+
+https://img.shields.io/badge/GitHub-vorsch--pozzi-black https://img.shields.io/badge/Tools-JoomScan%20%2B%20Python-orange https://img.shields.io/badge/Status-Active-brightgreen
