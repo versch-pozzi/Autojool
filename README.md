@@ -2,7 +2,8 @@
 
 🛡️ Autojool - Joomla Security Automation Bot
 
-https://img.shields.io/badge/Python-3.6+-blue.svg https://img.shields.io/badge/Kali-Linux-red.svg https://img.shields.io/badge/Security-Scanner-green.svg https://img.shields.io/badge/Automation-Enabled-success.svg
+https://img.shields.io/badge/Python-3.6+-blue.svg
+ https://img.shields.io/badge/Kali-Linux-red.svg https://img.shields.io/badge/Security-Scanner-green.svg https://img.shields.io/badge/Automation-Enabled-success.svg
 
 A powerful Python automation tool by versch-pozzi that enhances OWASP JoomScan for automated security assessments of Joomla websites. Processes multiple targets, filters results, and provides clean vulnerability reports.
 
