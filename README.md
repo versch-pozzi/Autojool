@@ -25,7 +25,7 @@ A powerful Python automation tool that enhances **OWASP JoomScan** to perform au
 
 1. **Clone the repository**:
 ```bash
-git clone https://github.com/yourusername/joomscan-automation-bot.git
+git clone https://github.com/versch-pozzi/joomscan-automation-bot.git
 cd joomscan-automation-bot
 ```
 
