@@ -164,4 +164,8 @@ Created by versch-pozzi 🎯
 
 ---
 
-https://img.shields.io/badge/GitHub-vorsch--pozzi-black https://img.shields.io/badge/Status-Working-brightgreen https://img.shields.io/badge/Platform-Kali%20Linux-purple
+---
+
+[![GitHub versch-pozzi](https://img.shields.io/badge/GitHub-versch--pozzi-black)](https://github.com/versch-pozzi/Autojool)
+[![Status: Working](https://img.shields.io/badge/Status-Working-brightgreen)]()
+[![Platform: Kali Linux](https://img.shields.io/badge/Platform-Kali%20Linux-purple)]()
