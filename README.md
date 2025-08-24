@@ -9,40 +9,38 @@
 ![License MIT](https://img.shields.io/badge/License-MIT-yellow)
 
 
-
-A powerful Python automation tool by versch-pozzi that enhances OWASP JoomScan for automated security assessments of Joomla websites.
+Powerful Python automation tool by versch-pozzi for automated Joomla security assessments.
 
 ✨ Features
 
-· 🔄 Automated Scanning - Processes multiple websites automatically
-· 🎯 Smart Filtering - Shows relevant vulnerabilities (hides XSS)
-· ⚡ Critical Priority - Highlights SQL Injection as critical
+· 🔄 Automated Scanning - Multiple websites processing
+· 🎯 Smart Filtering - Relevant vulnerabilities only (no XSS)
+· ⚡ Critical Priority - SQL Injection highlighted as critical
 · 📊 Clean Reporting - Beautiful table-formatted output
-· ⏱️ Time-Efficient - Automated sequential scanning
+· ⏱️ Time-Efficient - Sequential automated scanning
 
-📦 Quick Installation
+📦 Installation
 
 ```bash
-# Clone the repository
+# Clone repository
 git clone https://github.com/versch-pozzi/Autojool.git
 cd Autojool
 
-# Make scripts executable
-chmod +x install_requirements.sh quick_start.sh main.py
-
 # Install requirements
-./install_requirements.sh
+sudo apt update
+sudo apt install -y joomscan python3 python3-pip
 ```
 
 🚀 Usage
 
-1. Configure Targets
+1. Configure Target Websites
 
 ```bash
+# Edit targets file
 nano sites.txt
 ```
 
-Add your target URLs:
+Example sites.txt:
 
 ```txt
 https://example.com
@@ -50,62 +48,84 @@ http://test-site.org
 https://target-website.com
 ```
 
-2. Run Scanning
+2. Run Security Scan
 
 ```bash
-# Quick start
-./quick_start.sh
-
-# Or directly
+# Execute main script
 python3 main.py sites.txt
 ```
 
 3. View Results
 
 ```bash
+# Check scan results
 cat scan_results.txt
+
+# Or view with pagination
+less scan_results.txt
 ```
 
 📁 Project Structure
 
 ```
 Autojool/
-├── 📄 main.py                 # Main automation script
-├── ⚙️ install_requirements.sh # Automatic installation
-├── 🚀 quick_start.sh          # Quick launch script
-├── 📋 requirements.txt        # Python dependencies
-├── 🎯 sites.txt              # Target websites file
-├── 📊 scan_results.txt       # Generated results
-└── 📖 README.md              # Documentation
+├── main.py              # Main automation script
+├── sites.txt           # Target websites list
+├── scan_results.txt    # Generated results
+└── README.md          # Documentation
 ```
 
 🎯 Vulnerability Classification
 
-Severity Type Emoji
-🔴 CRITICAL SQL Injection 🔴
-⚪ NORMAL Other vulnerabilities ⚪
-🚫 HIDDEN XSS/Cross-Site 🚫
+Level Type Description
+🔴 CRITICAL SQL Injection Database vulnerabilities
+⚪ NORMAL Other RCE, LFI, RFI, etc.
+🚫 HIDDEN XSS Filtered out
 
-🔧 Troubleshooting
+⚙️ Automatic Filtering
 
-Permission Issues:
+Removed from reports:
+
+· ❌ XSS vulnerabilities
+· ❌ Cross-Site scripting
+· ❌ Admin panel information
+· ❌ Path enumeration data
+
+🔧 Setup Commands
+
+Basic Setup:
 
 ```bash
-chmod +x *.sh *.py
+git clone https://github.com/versch-pozzi/Autojool.git
+cd Autojool
+sudo apt install joomscan python3
 ```
 
-JoomScan Not Found:
+Edit Targets:
 
 ```bash
-sudo apt install joomscan
+nano sites.txt
+```
+
+Run Scan:
+
+```bash
+python3 main.py sites.txt
+```
+
+Check Results:
+
+```bash
+cat scan_results.txt
 ```
 
 🛡️ Legal Disclaimer
 
-For educational and authorized testing only! ⚠️
+FOR EDUCATIONAL USE ONLY ⚠️
 
-· Use only on websites you own or have permission to test
-· Unauthorized scanning is illegal
+· Use only on websites you own
+· Get proper authorization before scanning
+· Unauthorized access is illegal
 · Developer not responsible for misuse
 
 📄 License
@@ -114,27 +134,34 @@ MIT License - see LICENSE file for details.
 
 ---
 
-🚀 Quick Commands
+🚀 Quick Start Guide
 
 ```bash
-# Full setup
+# 1. Clone and enter
 git clone https://github.com/versch-pozzi/Autojool.git
 cd Autojool
-chmod +x *.sh *.py
-./install_requirements.sh
+
+# 2. Install tools
+sudo apt install joomscan python3
+
+# 3. Configure targets
 nano sites.txt
-./quick_start.sh
+
+# 4. Run scan
+python3 main.py sites.txt
+
+# 5. View results
 cat scan_results.txt
 ```
 
 ---
 
-⭐ If you find this useful, please give it a star! ⭐
+⭐ If this tool helps you, please give it a star! ⭐
 
-Happy ethical hacking! 🚀
+Happy ethical security testing! 🚀
 
-By versch-pozzi 🎯
+Created by versch-pozzi 🎯
 
 ---
 
-https://img.shields.io/badge/GitHub-vorsch--pozzi-black https://img.shields.io/badge/Tools-JoomScan%20%2B%20Python-orange https://img.shields.io/badge/Status-Active-brightgreen
+https://img.shields.io/badge/GitHub-vorsch--pozzi-black https://img.shields.io/badge/Status-Working-brightgreen https://img.shields.io/badge/Platform-Kali%20Linux-purple
