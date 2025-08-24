@@ -243,7 +243,7 @@ MIT License - see LICENSE file for details.
 
 1. **Clone and setup**:
    ```bash
-   git clone https://github.com/versch-pozzi/joomscan-automation-bot.git
+   git clone https://github.com/versch-pozzi/Autojool
    cd joomscan-automation-bot
    ./install_requirements.sh
    ```
