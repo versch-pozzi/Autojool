@@ -1,272 +1,158 @@
 
-# 🛡️ JoomScan Automation Bot
 
-![Python](https://img.shields.io/badge/Python-3.6+-blue.svg)
-![Kali Linux](https://img.shields.io/badge/Kali-Linux-red.svg)
-![Security](https://img.shields.io/badge/Security-Scanner-green.svg)
-![Automation](https://img.shields.io/badge/Automation-Enabled-success.svg)
+🛡️ Autojool - Joomla Security Automation Bot
 
-A powerful Python automation tool that enhances **OWASP JoomScan** to perform automated security assessments of Joomla websites. This bot processes multiple targets, filters results, and provides clean vulnerability reports with critical priority highlighting.
+https://img.shields.io/badge/Python-3.6+-blue.svg https://img.shields.io/badge/Kali-Linux-red.svg https://img.shields.io/badge/Security-Scanner-green.svg https://img.shields.io/badge/Automation-Enabled-success.svg
 
-## ✨ Features
+A powerful Python automation tool by versch-pozzi that enhances OWASP JoomScan for automated security assessments of Joomla websites. Processes multiple targets, filters results, and provides clean vulnerability reports.
 
-- 🔄 **Automated Scanning** - Processes multiple websites from a text file automatically
-- 🎯 **Smart Filtering** - Shows only relevant vulnerabilities (hides XSS and Cross-Site Scripting)
-- ⚡ **Critical Priority** - Highlights SQL Injection as critical vulnerabilities
-- 📊 **Clean Reporting** - Beautiful table-formatted output
-- ⏱️ **Time-Efficient** - Automated sequential scanning
-- 🚫 **Noise Reduction** - Removes admin panel and unnecessary path information
-- 🐍 **Easy Setup** - One-command installation script
-- 🚀 **Quick Start** - Simple launch script included
+✨ Features
 
-## 📦 Installation
+· 🔄 Automated Scanning - Processes multiple websites automatically
+· 🎯 Smart Filtering - Shows relevant vulnerabilities (hides XSS)
+· ⚡ Critical Priority - Highlights SQL Injection as critical
+· 📊 Clean Reporting - Beautiful table-formatted output
+· ⏱️ Time-Efficient - Automated sequential scanning
+· 🚫 Noise Reduction - Removes unnecessary information
+· 🐍 Easy Setup - One-command installation
+· 🚀 Quick Start - Simple launch system
 
-### Quick Installation (Recommended)
+📦 Quick Installation
 
-1. **Clone the repository**:
 ```bash
-git clone https://github.com/versch-pozzi/joomscan-automation-bot.git
-cd joomscan-automation-bot
-```
+# Clone the repository
+git clone https://github.com/versch-pozzi/Autojool.git
+cd Autojool
 
-2. **Run the installation script**:
-```bash
-chmod +x install_requirements.sh
+# Make scripts executable
+chmod +x install_requirements.sh quick_start.sh main.py
+
+# Install requirements
 ./install_requirements.sh
 ```
 
-### Manual Installation
+🚀 Usage
 
-If you prefer manual setup:
-
-1. **Install JoomScan**:
-```bash
-sudo apt update
-sudo apt install joomscan
-```
-
-2. **Verify Python 3.6+ is installed**:
-```bash
-python3 --version
-```
-
-3. **Make scripts executable**:
-```bash
-chmod +x joomscan_bot.py quick_start.sh
-```
-
-## 🗂️ Project Structure
-
-```
-joomscan-automation-bot/
-├── 📄 joomscan_bot.py          # Main automation script
-├── ⚙️ install_requirements.sh   # Automatic installation script
-├── 🚀 quick_start.sh           # Quick launch script
-├── 📋 requirements.txt         # Python dependencies
-├── 🎯 sites.txt               # Target websites file (example)
-├── 📊 scan_results.txt        # Generated results file
-└── 📖 README.md               # This documentation
-```
-
-## 📋 File Descriptions
-
-### `install_requirements.sh`
-**Purpose**: Automated installation of all dependencies  
-**Features**:
-- Checks system requirements
-- Installs JoomScan (from repo or source)
-- Sets up Python virtual environment
-- Creates example configuration files
-- Makes scripts executable
-
-### `quick_start.sh` 
-**Purpose**: One-command launch of the scanning process  
-**Features**:
-- Activates virtual environment
-- Validates target list
-- Runs the scanner
-- Provides completion status
-
-### `requirements.txt`
-**Purpose**: Python package dependencies  
-**Note**: Uses only Python standard library - no external packages required
-
-### `sites.txt`
-**Purpose**: Target websites list (one URL per line)  
-**Format**: Remove `#` to activate target URLs
-
-## 🚀 Usage
-
-### Method 1: Quick Start (Recommended)
-```bash
-./quick_start.sh
-```
-
-### Method 2: Manual Execution
-```bash
-# Edit targets file first
-nano sites.txt
-
-# Run the scanner
-python3 joomscan_bot.py sites.txt
-
-# View results
-cat scan_results.txt
-```
-
-### Method 3: Using Virtual Environment
-```bash
-# Activate virtual environment
-source joomscan-env/bin/activate
-
-# Run scanner
-python3 joomscan_bot.py sites.txt
-
-# Deactivate when done
-deactivate
-```
-
-## 🎯 Preparing Targets
-
-Edit `sites.txt` with your target URLs:
+1. Configure Targets
 
 ```bash
 nano sites.txt
 ```
 
-Example content:
+Add your target URLs:
+
 ```txt
-# 🎯 Target websites (remove '#' to activate)
-https://example1.com
+https://example.com
 http://test-site.org
-# https://another-site.com
 https://target-website.com
 ```
 
-## 📊 Sample Output
+2. Run Scanning
 
-```
-╔══════════════════════════════════════════════════════════════════════════════════╗
-║ 🔍 Site: https://example.com                                                     ║
-║ 🕒 Time: 2024-01-15 14:30:25                                                     ║
-╠══════════════════════════════════════════════════════════════════════════════════╣
-║ 📋 Joomla version 3.4.5 identified                                               ║
-╠══════════════════════════════════════════════════════════════════════════════════╣
-║ 🚨 VULNERABILITIES:                                                              ║
-╠──────────────────────────────────────────────────────────────────────────────────╣
-║ 🔴 CRITICAL: SQL Injection in com_content component                              ║
-║ ⚪ NORMAL: Joomla! 1.5.x - Remote Admin Change Password                           ║
-║ ⚪ NORMAL: CVE-2015-8562: Remote Code Execution                                   ║
-╠══════════════════════════════════════════════════════════════════════════════════╣
-║ 💥 EXPLOITS:                                                                     ║
-╠──────────────────────────────────────────────────────────────────────────────────╣
-║ 📌 CRITICAL: SQL Injection in com_content component                              ║
-║    🔗 Link:  EDB : https://www.exploit-db.com/exploits/12345/                    ║
-║                                                                                  ║
-╚══════════════════════════════════════════════════════════════════════════════════╝
+```bash
+# Quick start
+./quick_start.sh
+
+# Or directly
+python3 main.py sites.txt
 ```
 
-## 🎯 Vulnerability Classification
+3. View Results
 
-| Severity | Type | Description | Emoji |
-|----------|------|-------------|-------|
-| 🔴 **CRITICAL** | SQL Injection | Database manipulation vulnerabilities | 🔴 |
-| ⚪ **NORMAL** | Other vulnerabilities | RCE, LFI, RFI, etc. | ⚪ |
-| 🚫 **HIDDEN** | XSS/Cross-Site | Intentionally filtered out | 🚫 |
+```bash
+cat scan_results.txt
+```
 
-## ⚙️ Configuration
+📁 Project Structure
+
+```
+Autojool/
+├── 📄 main.py                 # Main automation script
+├── ⚙️ install_requirements.sh # Automatic installation
+├── 🚀 quick_start.sh          # Quick launch script
+├── 📋 requirements.txt        # Python dependencies
+├── 🎯 sites.txt              # Target websites file
+├── 📊 scan_results.txt       # Generated results
+└── 📖 README.md              # Documentation
+```
+
+🎯 Vulnerability Classification
+
+Severity Type Emoji
+🔴 CRITICAL SQL Injection 🔴
+⚪ NORMAL Other vulnerabilities ⚪
+🚫 HIDDEN XSS/Cross-Site 🚫
+
+⚙️ Configuration
 
 The bot automatically filters out:
-- ❌ XSS (Cross-Site Scripting) vulnerabilities
-- ❌ Cross-Site related exploits  
-- ❌ Admin panel information
-- ❌ Path enumeration results
 
-## 🔧 Troubleshooting
+· ❌ XSS vulnerabilities
+· ❌ Cross-Site exploits
+· ❌ Admin panel information
+· ❌ Path enumeration results
 
-### Common Issues:
+🔧 Troubleshooting
 
-1. **JoomScan not found**:
-   ```bash
-   sudo apt install joomscan
-   ```
+Permission Issues:
 
-2. **Permission denied**:
-   ```bash
-   chmod +x *.sh
-   chmod +x joomscan_bot.py
-   ```
+```bash
+chmod +x *.sh *.py
+```
 
-3. **No targets found**:
-   ```bash
-   nano sites.txt  # Uncomment target URLs
-   ```
+JoomScan Not Found:
 
-4. **Python not installed**:
-   ```bash
-   sudo apt install python3 python3-pip
-   ```
+```bash
+sudo apt install joomscan
+```
 
-## 🛡️ Legal Disclaimer
+Python Issues:
 
-This tool is designed for **educational purposes** and **authorized security testing** only. 
+```bash
+sudo apt install python3 python3-pip
+```
 
-⚠️ **WARNING**: 
-- Use only on websites you own or have explicit permission to test
-- Unauthorized scanning is illegal and unethical
-- The developers are not responsible for misuse
+🛡️ Legal Disclaimer
 
-## 🤝 Contributing
+For educational and authorized testing only! ⚠️
 
-We welcome contributions! Please:
+· Use only on websites you own or have permission to test
+· Unauthorized scanning is illegal
+· Developer not responsible for misuse
 
-1. Fork the repository
-2. Create a feature branch
-3. Submit a pull request
-4. Report issues or suggestions
+🤝 Contributing
 
-## 📄 License
+Feel free to contribute! Fork → Branch → PR → Issue
+
+📄 License
 
 MIT License - see LICENSE file for details.
 
-## 🙏 Acknowledgments
+🙏 Acknowledgments
 
-- **OWASP** for the amazing JoomScan tool
-- **Kali Linux** team for the great security distribution  
-- **Python community** for excellent libraries
-
----
-
-## 🚀 Quick Start Guide
-
-### For First-Time Users:
-
-1. **Clone and setup**:
-   ```bash
-   git clone https://github.com/versch-pozzi/Autojool
-   cd Autojool
-   ./install_requirements.sh
-   ```
-
-2. **Configure targets**:
-   ```bash
-   nano sites.txt  # Add your target URLs
-   ```
-
-3. **Run scanning**:
-   ```bash
-   ./quick_start.sh
-   ```
-
-4. **View results**:
-   ```bash
-   cat scan_results.txt
-   ```
+· OWASP for JoomScan
+· Kali Linux team
+· Python community
 
 ---
 
-**⭐ If you find this useful, please give it a star! ⭐**
+🚀 Quick Commands
 
-**Happy ethical hacking!** 🚀
+```bash
+# Full setup
+git clone https://github.com/versch-pozzi/Autojool.git
+cd Autojool
+chmod +x *.sh *.py
+./install_requirements.sh
+nano sites.txt
+./quick_start.sh
+cat scan_results.txt
+```
 
-*Remember: With great power comes great responsibility!* 🕷️
+---
+
+⭐ If you find this useful, please give it a star! ⭐
+
+Happy ethical hacking! 🚀
+
+By versch-pozzi 🎯
